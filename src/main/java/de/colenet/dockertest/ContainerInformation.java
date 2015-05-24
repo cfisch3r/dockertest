@@ -5,7 +5,7 @@ import java.util.Map;
 
 import de.colenet.dockertest.model.ContainerConfig;
 import de.colenet.dockertest.model.Ports;
-import de.colenet.dockertest.model.VolumeBinds;
+import de.colenet.dockertest.model.VolumeBind;
 import de.colenet.dockertest.model.VolumesRW;
 
 public class ContainerInformation {
@@ -45,7 +45,7 @@ public class ContainerInformation {
 
 	private ContainerState state;
 
-	private VolumeBinds volumes;
+	private VolumeBind[] volumes;
 
 	private VolumesRW volumesRW;
 
@@ -185,11 +185,11 @@ public class ContainerInformation {
 		this.state = state;
 	}
 
-	public VolumeBinds getVolumes() {
+	public VolumeBind[] getVolumes() {
 		return volumes;
 	}
 
-	public void setVolumes(VolumeBinds volumes) {
+	public void setVolumes(VolumeBind[] volumes) {
 		this.volumes = volumes;
 	}
 
